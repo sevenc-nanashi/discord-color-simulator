@@ -1,8 +1,9 @@
 import { Component, createSignal } from "solid-js";
 import { ImageAdd } from "./icons";
 
-const [previewText, setPreviewText] =
-  createSignal("# が絵文字に置き換えられます。");
+const defaultPreviewText = "上のテキストボックスの内容がここに表示されます。";
+
+const [previewText, setPreviewText] = createSignal(defaultPreviewText);
 const [emoji, setEmoji] = createSignal(null);
 const [roleColor, setRoleColor] = createSignal(null);
 
@@ -44,7 +45,11 @@ const Input = () => (
       <input
         type="text"
         class="border-discord-light-accent dark:border-discord-dark-accent border-2 rounded p-2 flex-grow bg-discord-light-bg dark:bg-discord-dark-bg"
-        onInput={(e) => setPreviewText((e.target as HTMLInputElement).value || "上のテキストボックスの内容がここに表示されます。")}
+        onInput={(e) =>
+          setPreviewText(
+            (e.target as HTMLInputElement).value || defaultPreviewText
+          )
+        }
         placeholder="「#」は絵文字に置き換えられます。"
       />
     </div>
