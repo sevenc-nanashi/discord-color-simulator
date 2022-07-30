@@ -108,6 +108,16 @@ const Message = (props) => (
     <div class="absolute left-[-8px] top-1 bg-discord-theme rounded-full w-[40px] h-[40px]"></div>
     <div class="font-bold" style={{ color: roleColor() }}>
       {props.name}
+      <span class="ml-[0.25rem] inline-block relative top-1">
+        {emoji() ? (
+          <img
+            src={emoji()}
+            class="w-[calc(1rem_+_4px)] h-[calc(1rem_+_4px)]"
+          />
+        ) : (
+          <ImageAdd class="w-[calc(1rem_+_4px)] h-[calc(1rem_+_4px)]" />
+        )}
+      </span>
     </div>
     {props.children}
   </div>
