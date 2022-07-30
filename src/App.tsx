@@ -158,6 +158,13 @@ const Simulator = (props) => (
             )}
         </div>
       </Message>
+      <Message name="スタンプ">
+        {emoji() ? (
+          <img src={emoji()} class="inline-block w-[160px] h-[160px]" />
+        ) : (
+          <ImageAdd class="inline-block w-[160px] h-[160px]" />
+        )}
+      </Message>
     </div>
   </div>
 );
