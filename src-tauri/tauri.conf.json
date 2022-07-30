@@ -56,7 +56,7 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 660,
         "resizable": true,
         "title": "Discord Color Simulator",
         "width": 1200
