@@ -26,6 +26,8 @@ jobs:
 
       - name: Build the site
         run: pnpm build
+        env:
+          VITE_BASE: "/discord-color-simulator/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
