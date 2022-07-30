@@ -44,7 +44,10 @@ const Input = () => (
       </button>
       <input
         type="text"
-        class="border-discord-light-accent dark:border-discord-dark-accent border-2 rounded p-2 flex-grow bg-discord-light-bg dark:bg-discord-dark-bg"
+        class={
+          "border-discord-light-accent dark:border-discord-dark-accent border-2 rounded p-2 flex-grow " +
+          "bg-discord-light-bg dark:bg-discord-dark-bg !outline-none"
+        }
         onInput={(e) =>
           setPreviewText(
             (e.target as HTMLInputElement).value || defaultPreviewText
@@ -85,8 +88,7 @@ const Input = () => (
         </span>
         <input
           type="text"
-          class="block flex-grow !outline-0 pl-1 bg-transparent"
-          value={roleColor() && roleColor().substring(1)}
+          class="block flex-grow !outline-0 pl-1 bg-transparent !outline-none"
           placeholder="5865f2"
           maxLength={6}
           onInput={(e) => {
