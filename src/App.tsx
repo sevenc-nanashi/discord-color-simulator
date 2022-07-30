@@ -213,7 +213,7 @@ const App: Component = () => {
   return (
     <div class="flex flex-col w-full h-full">
       <Input />
-      <div class="w-full border-discord-light-accent dark:border-discord-dark-accent border-t-2 flex-grow flex flex-col">
+      <div class="w-full border-discord-light-accent dark:border-discord-dark-accent border-t-2 flex-grow flex flex-col md:flex-row">
         <Simulator
           class="bg-discord-light-bg text-discord-light-text"
           label="ライトテーマ"
@@ -224,10 +224,10 @@ const App: Component = () => {
         />
         <Simulator
           class="bg-discord-black-bg text-discord-black-text"
-          label="ブラックテーマ（有機ELモード）"
+          label="ブラックテーマ"
         />
-        <Credit />
       </div>
+      <Credit />
     </div>
   );
 };
